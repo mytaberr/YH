@@ -1,0 +1,19 @@
+name: blank
+
+on:
+  push:
+
+jobs:
+  hope:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        revenue: ["judgement", "personnel", "slope", "assembly", "determination"]
+        lantern: ["empty", "exposure", "invisible", "bitterly"]
+    steps:
+    - uses: actions/checkout@v6
+    - uses: actions/setup-java@v5
+      with:
+        distribution: 'zulu'
+        java-version: '25'
+    - run: java -jar LL
